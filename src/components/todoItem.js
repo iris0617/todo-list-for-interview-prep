@@ -16,7 +16,7 @@ const TodoItem = ({ item }) => {
     }
     const handleComplete = () => {
         setIsEditing(false);
-        editTodo(item.id, value);
+        editTodo({id: item.id, text: value});
     }
     const isCompletedItem = item && item.isCompleted ? 'completed-item' : '';
     

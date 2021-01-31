@@ -3,11 +3,11 @@ import TodoItem from './todoItem';
 import TodoContext from './todoContext';
 
 const TodoList = () => {
-    const { todoList } = useContext(TodoContext);
+    const { visibleTodo } = useContext(TodoContext);
     return (
         <div>
             <ul>
-            {todoList.map((ele, idx) =>
+            {visibleTodo.map((ele, idx) =>
                 <li key={`${idx}`}>
                     <TodoItem item={ele} />
                 </li>
